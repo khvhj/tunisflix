@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<title>مسلسل فلوجة</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    body { background-color: #121212; color: #fff; font-family: Tahoma, sans-serif; margin: 0; padding: 0; text-align: center; }
+    h1 { padding: 20px 10px; margin: 0; }
+    .seasons { display: flex; flex-direction: column; gap: 20px; align-items: center; padding: 10px; }
+    .season { background-color: #1e1e1e; padding: 15px; border-radius: 10px; width: 95%; max-width: 400px; }
+    .season h2 { margin: 10px 0; }
+    .episodes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    button { padding: 8px 12px; border: none; border-radius: 5px; background-color: #333; color: white; cursor: pointer; }
+    button:hover:not([disabled]) { background-color: #4caf50; }
+    .player-wrapper { margin-top: 30px; width: 100%; max-width: 1000px; aspect-ratio: 16 / 9; margin-inline: auto; display: none; position: relative; padding-bottom: 56.25%; height: 0; }
+    .player-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 10px; }
+    #episode-title { font-size: 20px; margin-top: 20px; display: none; }
+  </style>
+</head>
+<body>
+
+<h1>مسلسل فلوجة</h1>
+<div class="seasons">
+<div class="season">
+<h2>الموسم 1</h2>
+<div class="episodes">
+<button onclick="playEpisode(1)">فلوجة 1 الحلقة 1</button>
+<button onclick="playEpisode(2)">فلوجة 1 الحلقة 2</button>
+<button onclick="playEpisode(3)">فلوجة 1 الحلقة 3</button>
+<button onclick="playEpisode(4)">فلوجة 1 الحلقة 4</button>
+<button onclick="playEpisode(5)">فلوجة 1 الحلقة 5</button>
+<button onclick="playEpisode(6)">فلوجة 1 الحلقة 6</button>
+<button onclick="playEpisode(7)">فلوجة 1 الحلقة 7</button>
+<button onclick="playEpisode(8)">فلوجة 1 الحلقة 8</button>
+<button onclick="playEpisode(9)">فلوجة 1 الحلقة 9</button>
+<button onclick="playEpisode(10)">فلوجة 1 الحلقة 10</button>
+<button onclick="playEpisode(11)">فلوجة 1 الحلقة 11</button>
+<button onclick="playEpisode(12)">فلوجة 1 الحلقة 12</button>
+<button onclick="playEpisode(13)">فلوجة 1 الحلقة 13</button>
+<button onclick="playEpisode(14)">فلوجة 1 الحلقة 14</button>
+<button onclick="playEpisode(15)">فلوجة 1 الحلقة 15</button>
+<button onclick="playEpisode(16)">فلوجة 1 الحلقة 16</button>
+<button onclick="playEpisode(17)">فلوجة 1 الحلقة 17</button>
+<button onclick="playEpisode(18)">فلوجة 1 الحلقة 18</button>
+<button onclick="playEpisode(19)">فلوجة 1 الحلقة 19</button>
+<button onclick="playEpisode(20)">فلوجة 1 الحلقة 20</button>
+</div>
+</div>
+<div class="season">
+<h2>الموسم 2</h2>
+<div class="episodes">
+<button onclick="playEpisode(101)">فلوجة 2 الحلقة 1</button>
+<button onclick="playEpisode(102)">فلوجة 2 الحلقة 2</button>
+<button onclick="playEpisode(103)">فلوجة 2 الحلقة 3</button>
+<button onclick="playEpisode(104)">فلوجة 2 الحلقة 4</button>
+<button onclick="playEpisode(105)">فلوجة 2 الحلقة 5</button>
+<button onclick="playEpisode(106)">فلوجة 2 الحلقة 6</button>
+<button onclick="playEpisode(107)">فلوجة 2 الحلقة 7</button>
+<button onclick="playEpisode(108)">فلوجة 2 الحلقة 8</button>
+<button onclick="playEpisode(109)">فلوجة 2 الحلقة 9</button>
+<button onclick="playEpisode(110)">فلوجة 2 الحلقة 10</button>
+<button onclick="playEpisode(111)">فلوجة 2 الحلقة 11</button>
+<button onclick="playEpisode(112)">فلوجة 2 الحلقة 12</button>
+<button onclick="playEpisode(113)">فلوجة 2 الحلقة 13</button>
+<button onclick="playEpisode(114)">فلوجة 2 الحلقة 14</button>
+<button onclick="playEpisode(115)">فلوجة 2 الحلقة 15</button>
+<button onclick="playEpisode(116)">فلوجة 2 الحلقة 16</button>
+<button onclick="playEpisode(117)">فلوجة 2 الحلقة 17</button>
+<button onclick="playEpisode(118)">فلوجة 2 الحلقة 18</button>
+<button onclick="playEpisode(119)">فلوجة 2 الحلقة 19</button>
+<button onclick="playEpisode(120)">فلوجة 2 الحلقة 20</button>
+<button onclick="playEpisode(121)">فلوجة 2 الحلقة 21</button>
+</div>
+</div>
+</div>
+<h3 id="episode-title" style="text-align:center;"></h3>
+<div id="player-wrapper" style="display:none; margin-top:20px;">
+<iframe allow="autoplay" allowfullscreen="" id="player" style="width:100%; height:480px; border:none;"></iframe>
+</div>
+<script>
+function playEpisode(key) {
+  const links = {1: 'https://drive.google.com/file/d/1H6aDwpqF36n191plwxRLlhnHaML4Z9Kg/preview', 2: 'https://drive.google.com/file/d/1y_q6SoZlIG2EtiGenZC8x7Ylv-1XyM37/preview', 3: 'https://drive.google.com/file/d/1THnSX4rLJZArQOSV2ngipYvvi2NVKpsv/preview', 4: 'https://drive.google.com/file/d/1aoYXGxZsQrZXqqHnIdOsMHYGmIZE_wwL/preview', 5: 'https://drive.google.com/file/d/1STZ5dJ2fjJJZpJcAYOFNn30pTVPSVdsV/preview', 6: 'https://drive.google.com/file/d/1rZgXRuDiVYkY6gMUUIRPD-UDBIXIopz2/preview', 7: 'https://drive.google.com/file/d/1-6V0Fs6cekjkxwojbwejtFt8nASoFsM7/preview', 8: 'https://drive.google.com/file/d/1EHDpwl5yJI5-JG1EZrG9ckVma2I82gK8/preview', 9: 'https://drive.google.com/file/d/1IrPZQbwJRssw1tR4Asyzw3Mklwi63VbW/preview', 10: 'https://drive.google.com/file/d/1KRIv91IQHVu76vVmH_RRsUkWHGVWpgI3/preview', 11: 'https://drive.google.com/file/d/16pLBZ6wr68_JqevhGy7Qv0rkT-uSwI_p/preview', 12: 'https://drive.google.com/file/d/1LZSYOXcUVQGUG1oCbupHC7Hyk3R15od6/preview', 13: 'https://drive.google.com/file/d/1LlWIATGg5zM1bil1uCK5psnrY66UuZkm/preview', 14: 'https://drive.google.com/file/d/1aAJpa8K5bBWUJBY1GHWh7PSLPdsMmumR/preview', 15: 'https://drive.google.com/file/d/1PkxVaUXxDKprMFtdAPO78tNW3NeD87PW/preview', 16: 'https://drive.google.com/file/d/12raLt7E3gDq91aeLghd-XBNmPh2wQ8r4/preview', 17: 'https://drive.google.com/file/d/1k0g38OqMa5jK7yved1RhMoloVT8GJu3z/preview', 18: 'https://drive.google.com/file/d/1TgjcAxITijGjgyUk56qb8LJaPABQB3C5/preview', 19: 'https://drive.google.com/file/d/1n5oOrOzQQ82Zb0RvbkvdUe4ZBIQvAFC3/preview', 20: 'https://drive.google.com/file/d/1Mo7RtXouMKxgOserRbtZn6yq4D0jkXBE/preview', 101: 'https://drive.google.com/file/d/1H6aDwpqF36n191plwxRLlhnHaML4Z9Kg/preview', 102: 'https://drive.google.com/file/d/1y_q6SoZlIG2EtiGenZC8x7Ylv-1XyM37/preview', 103: 'https://drive.google.com/file/d/1THnSX4rLJZArQOSV2ngipYvvi2NVKpsv/preview', 104: 'https://drive.google.com/file/d/1aoYXGxZsQrZXqqHnIdOsMHYGmIZE_wwL/preview', 105: 'https://drive.google.com/file/d/1STZ5dJ2fjJJZpJcAYOFNn30pTVPSVdsV/preview', 106: 'https://drive.google.com/file/d/1rZgXRuDiVYkY6gMUUIRPD-UDBIXIopz2/preview', 107: 'https://drive.google.com/file/d/1-6V0Fs6cekjkxwojbwejtFt8nASoFsM7/preview', 108: 'https://drive.google.com/file/d/1EHDpwl5yJI5-JG1EZrG9ckVma2I82gK8/preview', 109: 'https://drive.google.com/file/d/1IrPZQbwJRssw1tR4Asyzw3Mklwi63VbW/preview', 110: 'https://drive.google.com/file/d/1KRIv91IQHVu76vVmH_RRsUkWHGVWpgI3/preview', 111: 'https://drive.google.com/file/d/16pLBZ6wr68_JqevhGy7Qv0rkT-uSwI_p/preview', 112: 'https://drive.google.com/file/d/1LZSYOXcUVQGUG1oCbupHC7Hyk3R15od6/preview', 113: 'https://drive.google.com/file/d/1LlWIATGg5zM1bil1uCK5psnrY66UuZkm/preview', 114: 'https://drive.google.com/file/d/1aAJpa8K5bBWUJBY1GHWh7PSLPdsMmumR/preview', 115: 'https://drive.google.com/file/d/1PkxVaUXxDKprMFtdAPO78tNW3NeD87PW/preview', 116: 'https://drive.google.com/file/d/12raLt7E3gDq91aeLghd-XBNmPh2wQ8r4/preview', 117: 'https://drive.google.com/file/d/1k0g38OqMa5jK7yved1RhMoloVT8GJu3z/preview', 118: 'https://drive.google.com/file/d/1TgjcAxITijGjgyUk56qb8LJaPABQB3C5/preview', 120: 'https://drive.google.com/file/d/1Mo7RtXouMKxgOserRbtZn6yq4D0jkXBE/preview', 119: 'https://drive.google.com/file/d/1n5oOrOzQQ82Zb0RvbkvdUe4ZBIQvAFC3/preview', 121: 'https://drive.google.com/file/d/1E2itGYLxNtu3NBR4vGvtjtTfls77OvJ5/preview', '1': 'https://drive.google.com/file/d/154Xctme3qr3-gHCrE8Hc98sFPEew9qkA/preview', '2': 'https://drive.google.com/file/d/10fTNrCqggsEryO6Q1vDjrPPg3yjidG2u/preview', '3': 'https://drive.google.com/file/d/1jq3H2PpT6NUlPZg-HecNrHUbSfnOjK_i/preview', '4': 'https://drive.google.com/file/d/1JiFJ5gM2PUhSJf9fU-paJq-WivPeh-ds/preview', '5': 'https://drive.google.com/file/d/1bj9yUTCouRAA2aiTzR5nYYnQACS9R0Px/preview', '6': 'https://drive.google.com/file/d/1ST8VL34XgpLKhphLAoDrmO5x0_BHwvJy/preview', '7': 'https://drive.google.com/file/d/1g5qDFsQc5Ddl-dmmzkp4d9qFB5rhpWGy/preview', '8': 'https://drive.google.com/file/d/1eWPDJroCc7Du2pORf0ZEASfh8r3A212z/preview', '9': 'https://drive.google.com/file/d/1vJXoCu9LYQoIkv5RlElD5_t6DVE0Kv6l/preview', '10': 'https://drive.google.com/file/d/1Q1T-L3qRxaDwnEAPpmAtXDmaKlxYwigY/preview', '11': 'https://drive.google.com/file/d/12pUcZCRL2gjiXawv-WkT5IMs6gR5g1Ds/preview', '12': 'https://drive.google.com/file/d/1i7d4qBVz2vSUQhGmNpTOxfH3tywWka40/preview', '13': 'https://drive.google.com/file/d/12se3XeaP632BW73VcBpbaH3eyFhy4TZB/preview', '14': 'https://drive.google.com/file/d/1SgSEIKNJMO8_k1TwFE3tKJJ4NOlMLnNG/preview', '15': 'https://drive.google.com/file/d/1ZwK13PL0fqsOaYLIWim9FLJoiJFtJdod/preview', '16': 'https://drive.google.com/file/d/140YmqrJEeK_ZZinUlBNzaXR-MGhFWloa/preview', '17': 'https://drive.google.com/file/d/1BXekWH0OxacegNjfyaFHf49iT-qlt564/preview', '18': 'https://drive.google.com/file/d/1jiT4MYrhsPwgHTqZ3Ta2yDsAzsHFhgj1/preview', '19': 'https://drive.google.com/file/d/1w4RoHjZRouqTR8yUIJMN_chkFUlkvDQl/preview', '20': 'https://drive.google.com/file/d/1wkEMSXy-Qo9MImcOEP28Y82xf61kWocU/preview'};
+  const iframe = document.getElementById('player');
+  const wrapper = document.getElementById('player-wrapper');
+  const title = document.getElementById('episode-title');
+  iframe.src = links[key];
+  let ep = parseInt(key);
+  let season = (ep >= 25) ? 2 : 1;
+  let number = (season === 2) ? ep - 24 : ep - 3;
+  title.textContent = "الموسم " + season + " - الحلقة " + number;
+  wrapper.style.display = "block";
+  wrapper.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
