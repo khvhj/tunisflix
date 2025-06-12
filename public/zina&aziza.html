@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>زينة وعزيزة</title>
+  <style>
+    body { background-color: #111; color: white; font-family: Arial; text-align: center; }
+    button {
+      background-color: #444; color: white; padding: 10px 20px;
+      margin: 5px; border: none; border-radius: 5px; cursor: pointer;
+    }
+    button:hover { background-color: #666; }
+  </style>
+</head>
+<body>
+  <h1>مسلسل زينة وعزيزة</h1>
+  <div class="episodes" style="margin: 30px auto; text-align: center;">
+<button onclick="playEpisode('1')">الحلقة 1</button>
+<button onclick="playEpisode('2')">الحلقة 2</button>
+<button onclick="playEpisode('3')">الحلقة 3</button>
+<button onclick="playEpisode('4')">الحلقة 4</button>
+<button onclick="playEpisode('5')">الحلقة 5</button>
+<button onclick="playEpisode('6')">الحلقة 6</button>
+<button onclick="playEpisode('7')">الحلقة 7</button>
+<button onclick="playEpisode('8')">الحلقة 8</button>
+<button onclick="playEpisode('9')">الحلقة 9</button>
+<button onclick="playEpisode('10')">الحلقة 10</button>
+</div>
+
+  
+<h3 id="episode-title" style="text-align:center;"></h3>
+<div id="player-wrapper" style="display:none; margin-top:20px;">
+  <iframe id="player" style="width:100%; height:480px; border:none;" allow="autoplay" allowfullscreen></iframe>
+</div>
+<script>
+const links = {'1': 'https://drive.google.com/file/d/1bIfv_7Ky5Xek_pk7LXyhCV-E7Hq7982M/preview', '2': 'https://drive.google.com/file/d/1qnoV472h78tksYjegicfrt6rcKwIdoDF/preview', '3': 'https://drive.google.com/file/d/1eMW3pi12QGHR-ldF5T13srMW5rDWigCD/preview', '4': 'https://drive.google.com/file/d/1x3gicNgnH0zymJj1asQJmbpixbobeJmA/preview', '5': 'https://drive.google.com/file/d/1bDYnooxwLuHdV0C8AtfFSlgt1OESvuk4/preview', '6': 'https://drive.google.com/file/d/1UNmcTCEI0aY9j3NNG8hTyGoJ8vJEgRyg/preview', '7': 'https://drive.google.com/file/d/1pctW3FeSzifDcGYH5QSLoSACU_-1tT3T/preview', '8': 'https://drive.google.com/file/d/1cjr41PvV9f8r8PHbUCq_ElfKltsoYzjb/preview', '9': 'https://drive.google.com/file/d/16kNErEtbgJ44fmJ9dlkJW4rlikPPcjgY/preview', '10': 'https://drive.google.com/file/d/1hPzvZ8wpYewKpk8qnnlPvQsMjWhWXYlE/preview'};
+
+function playEpisode(key) {
+  const iframe = document.getElementById('player');
+  const wrapper = document.getElementById('player-wrapper');
+  const title = document.getElementById('episode-title');
+  iframe.src = links[key];
+  title.textContent = "الحلقة " + key;
+  wrapper.style.display = "block";
+  wrapper.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

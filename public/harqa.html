@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<title>مسلسل الحرقة</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    body { background-color: #121212; color: #fff; font-family: Tahoma, sans-serif; text-align: center; }
+    h1 { padding: 20px 10px; }
+    .episodes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    button { padding: 8px 12px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #4caf50; }
+    .player-wrapper { margin-top: 30px; width: 90%; max-width: 900px; margin-inline: auto; display: none; position: relative; padding-bottom: 56.25%; height: 0; }
+    .player-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<h1>مسلسل الحرقة</h1>
+<h2>الموسم 1</h2>
+<div class="episodes">
+<button onclick="playEpisode('1_1')">حرقة 1 الحلقة 1</button>
+<button onclick="playEpisode('1_2')">حرقة 1 الحلقة 2</button>
+<button onclick="playEpisode('1_3')">حرقة 1 الحلقة 3</button>
+<button onclick="playEpisode('1_4')">حرقة 1 الحلقة 4</button>
+<button onclick="playEpisode('1_5')">حرقة 1 الحلقة 5</button>
+<button onclick="playEpisode('1_6')">حرقة 1 الحلقة 6</button>
+<button onclick="playEpisode('1_7')">حرقة 1 الحلقة 7</button>
+<button onclick="playEpisode('1_8')">حرقة 1 الحلقة 8</button>
+<button onclick="playEpisode('1_9')">حرقة 1 الحلقة 9</button>
+<button onclick="playEpisode('1_10')">حرقة 1 الحلقة 10</button>
+<button onclick="playEpisode('1_11')">حرقة 1 الحلقة 11</button>
+<button onclick="playEpisode('1_12')">حرقة 1 الحلقة 12</button>
+<button onclick="playEpisode('1_13')">حرقة 1 الحلقة 13</button>
+<button onclick="playEpisode('1_14')">حرقة 1 الحلقة 14</button>
+<button onclick="playEpisode('1_15')">حرقة 1 الحلقة 15</button>
+<button onclick="playEpisode('1_16')">حرقة 1 الحلقة 16</button>
+<button onclick="playEpisode('1_17')">حرقة 1 الحلقة 17</button>
+<button onclick="playEpisode('1_18')">حرقة 1 الحلقة 18</button>
+<button onclick="playEpisode('1_19')">حرقة 1 الحلقة 19</button>
+<button onclick="playEpisode('1_20')">حرقة 1 الحلقة 20</button>
+</div>
+<h2>الموسم 2</h2>
+<div class="episodes">
+<button onclick="playEpisode('2_1')">حرقة 2 الحلقة 1</button>
+<button onclick="playEpisode('2_2')">حرقة 2 الحلقة 2</button>
+<button onclick="playEpisode('2_3')">حرقة 2 الحلقة 3</button>
+<button onclick="playEpisode('2_4')">حرقة 2 الحلقة 4</button>
+<button onclick="playEpisode('2_5')">حرقة 2 الحلقة 5</button>
+<button onclick="playEpisode('2_6')">حرقة 2 الحلقة 6</button>
+<button onclick="playEpisode('2_7')">حرقة 2 الحلقة 7</button>
+<button onclick="playEpisode('2_8')">حرقة 2 الحلقة 8</button>
+<button onclick="playEpisode('2_9')">حرقة 2 الحلقة 9</button>
+<button onclick="playEpisode('2_10')">حرقة 2 الحلقة 10</button>
+<button onclick="playEpisode('2_11')">حرقة 2 الحلقة 11</button>
+<button onclick="playEpisode('2_12')">حرقة 2 الحلقة 12</button>
+<button onclick="playEpisode('2_13')">حرقة 2 الحلقة 13</button>
+<button onclick="playEpisode('2_14')">حرقة 2 الحلقة 14</button>
+<button onclick="playEpisode('2_15')">حرقة 2 الحلقة 15</button>
+<button onclick="playEpisode('2_16')">حرقة 2 الحلقة 16</button>
+<button onclick="playEpisode('2_17')">حرقة 2 الحلقة 17</button>
+<button onclick="playEpisode('2_18')">حرقة 2 الحلقة 18</button>
+<button onclick="playEpisode('2_19')">حرقة 2 الحلقة 19</button>
+<button onclick="playEpisode('2_20')">حرقة 2 الحلقة 20</button>
+</div>
+<h3 id="episode-title"></h3>
+<div class="player-wrapper" id="player-wrapper">
+<iframe allow="autoplay" allowfullscreen="" id="player" src=""></iframe>
+</div>
+<script>
+    const links = {'1_1': 'https://drive.google.com/file/d/1Ap-iHZSetLquk-35c1_7vvviJhY9zvNF/preview', '1_2': 'https://drive.google.com/file/d/11xv3EMjdFlfPeqAJeghO2FJ9xc1rUcvz/preview', '1_3': 'https://drive.google.com/file/d/1iCFeBKom4roI69BG-ZIRxLHNkh9FHJat/preview', '1_4': 'https://drive.google.com/file/d/1a4MU2Kgg9LAdHE63ua_Glw4eRU2APTdM/preview', '1_5': 'https://drive.google.com/file/d/1T3cgCpcGzWhNmffjOQbG2ZoVlXuBFhlz/preview', '1_6': 'https://drive.google.com/file/d/1NjUbs3MYxEiHNKFRXlLVutmfv0d4yahQ/preview', '1_7': 'https://drive.google.com/file/d/1xyHfUL_2akM1RGaPnf23N5qkIaRt16o_/preview', '1_8': 'https://drive.google.com/file/d/1ggM5yzzrW6gma94_deBMYB4zkSzEyQIM/preview', '1_9': 'https://drive.google.com/file/d/1itNawd8XGNkuB4UKS_OHBINiCgig90Uk/preview', '1_10': 'https://drive.google.com/file/d/11czRF2YKyBwISb2b1LHgllugt5ciGG3a/preview', '1_11': 'https://drive.google.com/file/d/1XU-v2jYQWogzburchCbAqlq5L6o5AZ6G/preview', '1_12': 'https://drive.google.com/file/d/1A0qNs-Dl_7qHxONq5JKu6ogEg60SaxuU/preview', '1_13': 'https://drive.google.com/file/d/1O5jHB9UbujEUdtswt87QiXfUrpHIfoGe/preview', '1_14': 'https://drive.google.com/file/d/1jJ9_bsa_GNy8pjpnKL-I6q5e4Air_eGL/preview', '1_15': 'https://drive.google.com/file/d/1FWNlcNrXNgiSv-lMrSrrsL6w0CKUfgqM/preview', '1_16': 'https://drive.google.com/file/d/1DTAsls7tFE1Y2DJ_N9n-5k31Kx_m2lJX/preview', '1_17': 'https://drive.google.com/file/d/1FXaD1103xP_DnDX5YMnFD36EjmdxsBta/preview', '1_18': 'https://drive.google.com/file/d/1OY6KZlm5kbpSppfxAmOyVPVWfsdnujaP/preview', '1_19': 'https://drive.google.com/file/d/1K5NCu6LX1ER4HC2b2RmbnYdBrfl7yOFP/preview', '1_20': 'https://drive.google.com/file/d/1MJX7Vr-dDo1scROuSswjJDBBMHbIvgki/preview', '2_1': 'https://drive.google.com/file/d/1g3rDR3xvxkHjfi82hnqmSIqybdsWgZZq/preview', '2_2': 'https://drive.google.com/file/d/1qt6IGIqcpR7p0rb6rVj2wHmRtIbty7UC/preview', '2_3': 'https://drive.google.com/file/d/13Evs2yiWM0Oc3ItxSqhM6OvK3ay8DJ64/preview', '2_4': 'https://drive.google.com/file/d/1jfZFl57f7ReA646demYJM0WaEUZOxyDe/preview', '2_5': 'https://drive.google.com/file/d/1QffPo5xV2QO_fDdLTZfKWy3OxAY9R7MN/preview', '2_6': 'https://drive.google.com/file/d/1z7O98qylxlT6RgLicZX_5B0SgCCsxPoZ/preview', '2_7': 'https://drive.google.com/file/d/1l7n4nPE51FmRk8uwlKTFZwIvU5R1dIUo/preview', '2_8': 'https://drive.google.com/file/d/1SgxQ4ZdUOMQ_mCk2cHol3KbTeK9giPgs/preview', '2_9': 'https://drive.google.com/file/d/1sh1hUOUJpDjaBsXFXGueDk_rs4KYzFgt/preview', '2_10': 'https://drive.google.com/file/d/1v3kJt5Zv9ff-L3LRzmyIkR4ILMg1pczJ/preview', '2_11': 'https://drive.google.com/file/d/1cqDXcSixVu1Ld7-HgLqeVDnQTE_Zj7ga/preview', '2_12': 'https://drive.google.com/file/d/15WXEN6Fy1-AwEEr4aeudorJRziIzOx2J/preview', '2_13': 'https://drive.google.com/file/d/1IU2jsquBAB79uq6R02DAuJ-43bVdimed/preview', '2_14': 'https://drive.google.com/file/d/1gfOd3jjPssyoo5OHX4MjO1Lx2ecJ0s1N/preview', '2_15': 'https://drive.google.com/file/d/1km81N-xN-8_J8omlbYrVzYmE8eQL7A9i/preview', '2_16': 'https://drive.google.com/file/d/1wJG__4HL6rxoAjxWPfy_XHV5LO0A0hfP/preview', '2_17': 'https://drive.google.com/file/d/1FKA2BJxgjs1LRG3Nc-0Z0IWYwQw8NnaY/preview', '2_18': 'https://drive.google.com/file/d/1D-6JgXl9nFV5dJJgN8hQdZu7M7-vKU4A/preview', '2_19': 'https://drive.google.com/file/d/1rCrEWwX-H1m7UyyJTTdHDHA9aymC4zJ0/preview', '2_20': 'https://drive.google.com/file/d/1qjiiHc2GciEZOfh3H3JzvLWJZK7UMULd/preview'};
+
+    function playEpisode(key) {
+      const iframe = document.getElementById('player');
+      const title = document.getElementById('episode-title');
+      const wrapper = document.getElementById('player-wrapper');
+      iframe.src = links[key];
+      title.textContent = key.includes("1_") ? 
+        "حرقة 1 الحلقة " + key.split("_")[1] : 
+        "حرقة 2 الحلقة " + key.split("_")[1];
+      title.style.display = 'block';
+      wrapper.style.display = 'block';
+      wrapper.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
